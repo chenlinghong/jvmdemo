@@ -1,0 +1,12 @@
+
+##　如何导出内存映像文件
+
+内存溢出自动导出
+
+    -XX:+HeapDumpOnOutOfMemoryError
+    -XX:HeapDumpPath=./
+
+采用jmap进行手动导出
+
+    jmap -dump:format=b,file=heap.hprof 16940 (16940为进程ＩＤ)
+    
